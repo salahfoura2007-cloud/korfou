@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Korfou</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    color:#fff; 
+}
+
+/* NAV */
+nav{
+    display:flex;  
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+    border-bottom:1px solid #111;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:3px;
+    color:#f5c542;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#fff;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#f5c542;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:100px 80px;
+    gap:80px;
+}
+
+.hero img{
+    width:450px;
+    border-radius:16px;
+    box-shadow:0 30px 60px rgba(245,197,66,0.3);
+}
+
+.hero-text h1{
+    font-size:52px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.gold{
+    color:#f5c542;
+    font-weight:700;
+} 
+
+.hero-text p{
+    color:#bbb;
+    line-height:1.8;
+    max-width:550px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 34px;
+    border:2px solid #f5c542;
+    color:#f5c542;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#f5c542;
+    color:#000;
+}
+
+/* SERVICES SECTION */
+.services{
+    padding:120px 80px;
+    text-align:center;
+}
+
+.services h2{
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:40px;
+    margin-top:40px;
+    text-align:left;
+}
+
+.service-card{
+    background:#111;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 15px 40px rgba(245,197,66,0.2);
+    transition: transform .3s ease;
+}
+
+.service-card:hover{
+    transform: translateY(-10px);
+}
+
+.service-card h3{
+    color:#f5c542;
+    margin-bottom:15px;
+}
+
+.service-card p{
+    color:#bbb;
+    line-height:1.6;
+}
+
+/* GALLERY */
+.gallery{
+    padding:120px 80px;
+    text-align:center;
+}
+
+.gallery h2{
+    font-size:42px;
+    margin-bottom:60px;
+}
+
+/* PRODUCT GRID */
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:50px;
+}
+
+/* PRODUCT CARD */
+.product-card{
+    text-align:center;
+    transition:transform .3s ease;
+}
+
+.product-card img{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 25px 60px rgba(245,197,66,0.25);
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+}
+
+.product-card h3{
+    margin-top:20px;
+    font-weight:500;
+}
+
+.price{
+    margin-top:8px;
+    color:#f5c542;
+    font-weight:600;
+    font-size:18px;
+}
+
+/* FOOTER */
+footer{
+    border-top:1px solid #111;
+    padding:40px 60px;
+    color:#aaa;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    background:#f5c542;
+    color:#000;
+    padding:14px 22px;
+    border-radius:30px;
+    font-weight:600;
+    text-decoration:none;
+    box-shadow:0 10px 25px rgba(245,197,66,.4);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">KORFOU</div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showHome()">Home</a></li>
+    <li><a href="#" onclick="showGallery()">Gallery</a></li>
+    <li><a href="#">How It Works</a></li>
+    <li><a href="#">FAQ</a></li>
+    <li><a href="https://www.google.com/maps/search/?api=1&query=Middlesex+University" target="_blank">Address</a></li>
+  </ul>
+</nav>
+
+<!-- HOME PAGE -->
+<section id="homePage">
+  <section class="hero">
+    <img src="images/hp.jpg" alt="Card Image">
+    <div class="hero-text">
+      <h1>Introducing Your <br><span class="gold">All Metal</span> Credit/Debit Card</h1>
+      <p>
+        A metal card speaks for itself. With its premium weight and luxury finish,
+        your card becomes more than payment — it becomes identity.
+      </p>
+      <a href="#" class="btn" onclick="showDesign()">Design Your Own</a>
+      <a href="#" class="btn" style="margin-left:20px;" onclick="showGallery()">Pre-Made Designs</a>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services">
+    <h2>Our <span class="gold">Services</span></h2>
+    <div class="service-grid">
+
+      <div class="service-card">
+        <h3>Custom Design Creation</h3>
+        <p>Fully personalize your card with colors, patterns, logos, or initials. Make it truly yours.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Premium Metal Finish</h3>
+        <p>High-quality metal construction with smooth matte or glossy finishes for a luxury feel.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Exclusive Pre-Made Designs</h3>
+        <p>Choose from our curated gallery of stylish, ready-to-use card designs for quick elegance.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Secure and Functional Technology</h3>
+        <p>Embedded chip and NFC technology for secure, contactless, and modern payment convenience.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Engraving & Personalization</h3>
+        <p>Add your name, initials, or a personal quote with custom fonts and placement options.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Premium Packaging & Delivery</h3>
+        <p>Luxury packaging to protect your card with fast, secure shipping—perfect for gifts.</p>
+      </div>
+
+    </div>
+  </section>
+</section>
+
+<!-- GALLERY PAGE -->
+<section id="galleryPage" style="display:none;">
+  <div class="gallery">
+    <h2>Pre-Made <span class="gold">Design Gallery</span></h2>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="images/mercedes.jpeg.jpg" alt="Mercedes">
+        <h3>Mercedes Design</h3>
+        <p class="price">£89.99</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/club.jpg" alt="Club Design">
+        <h3>Club Design</h3>
+        <p class="price">£79.99</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/canvas-image-2-275.png" alt="Canvas Design">
+        <h3>Canvas Design</h3>
+        <p class="price">£89.99</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/creditcard.jpg" alt="Credit Card Design">
+        <h3>Credit Card Design</h3>
+        <p class="price">£89.99</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/the world.jpg" alt="The World Design">
+        <h3>The World Design</h3>
+        <p class="price">£89.99</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/one piece.jpg" alt="One Piece Design">
+        <h3>One Piece Design</h3>
+        <p class="price">£89.99</p>
+      </div>
+
+    </div>
+
+    <a href="#" class="btn" style="margin-top:60px;" onclick="showHome()">Back to Home</a>
+  </div>
+</section>
+
+<!-- DESIGN PAGE -->
+<section id="designPage" style="display:none; padding:80px; color:#fff;">
+
+  <h1 style="text-align:center; font-size:42px;">Design Your <span class="gold">Custom Card</span></h1>
+
+  <div style="display:flex; flex-wrap:wrap; gap:50px; justify-content:center; margin-top:50px;">
+
+    <!-- CARD PREVIEW -->
+    <div style="flex:1 1 300px; max-width:400px;">
+      <div id="cardPreview" style="background:#111; padding:30px; border-radius:16px; box-shadow:0 15px 40px rgba(245,197,66,0.2);">
+        <div style="font-size:18px; margin-bottom:20px;">Card Preview</div>
+        <div style="background:#222; border-radius:12px; padding:20px; position:relative; color:#fff;">
+          <div style="display:flex; justify-content:flex-start; margin-bottom:40px;">
+            <div style="width:50px; height:40px; background:gold; border-radius:6px; margin-right:15px;"></div>
+            <div>0000 0000 0000 0000</div>
+          </div>
+          <div id="cardHolderName" style="font-size:18px;">(Name Here)</div>
+        </div>
+        <div style="background:#222; border-radius:12px; padding:20px; margin-top:20px; display:flex; justify-content:space-between;">
+          <div>VALID THRU 55/55</div>
+          <div>555</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div style="flex:1 1 300px; max-width:400px;">
+      <div style="background:#111; padding:30px; border-radius:16px; box-shadow:0 15px 40px rgba(245,197,66,0.2);">
+        <label>Card Holder Name:</label>
+        <input type="text" id="nameInput" placeholder="Enter Name" style="width:100%; padding:10px; margin:10px 0; border-radius:8px; border:none; background:#222; color:#fff;">
+
+        <label>Card Number Position:</label>
+        <select id="cardNumberPos" style="width:100%; padding:10px; margin:10px 0; border-radius:8px; background:#222; color:#fff; border:none;">
+          <option value="front">Front</option>
+          <option value="back">Back</option>
+        </select>
+
+        <label>Card Name Position:</label>
+        <select id="cardNamePos" style="width:100%; padding:10px; margin:10px 0; border-radius:8px; background:#222; color:#fff; border:none;">
+          <option value="front">Front</option>
+          <option value="back">Back</option>
+        </select>
+
+        <label>Comment:</label>
+        <input type="text" id="commentInput" placeholder="Add Comment" style="width:100%; padding:10px; margin:10px 0; border-radius:8px; border:none; background:#222; color:#fff;">
+
+        <button onclick="updateCard()" style="width:100%; padding:15px; background:#f5c542; border:none; color:#000; font-weight:600; border-radius:8px; margin-top:20px;">Update Preview</button>
+        <a href="https://wa.me/2130549324709" target="_blank" style="display:block; text-align:center; margin-top:15px; padding:12px; background:#000; border:2px solid #f5c542; color:#f5c542; text-decoration:none; border-radius:8px;">Order via WhatsApp</a>
+        <a href="#" class="btn" onclick="showHome()" style="margin-top:20px; display:inline-block;">Back to Home</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2025 Korfou. All Rights Reserved.</p>
+</footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/2130549324709" target="_blank" class="whatsapp">WhatsApp Us</a>
+
+<script>
+function showDesign() {
+    document.getElementById("homePage").style.display = "none";
+    document.getElementById("designPage").style.display = "block";
+    document.getElementById("galleryPage").style.display = "none";
+}
+function showHome() {
+    document.getElementById("designPage").style.display = "none";
+    document.getElementById("homePage").style.display = "block";
+    document.getElementById("galleryPage").style.display = "none";
+}
+function showGallery() {
+    document.getElementById("homePage").style.display = "none";
+    document.getElementById("designPage").style.display = "none";
+    document.getElementById("galleryPage").style.display = "block";
+}
+
+// Update card preview dynamically
+function updateCard(){
+  const name = document.getElementById("nameInput").value;
+  const holder = document.getElementById("cardHolderName");
+  holder.textContent = name ? name : "(Name Here)";
+}
+</script>
+
+</body>
+</html>
